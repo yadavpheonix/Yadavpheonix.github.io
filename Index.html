@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTech | E-Waste Awareness & Creative Crafts</title>
+    <style>
+        /* Modern CSS Global Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f7f9f6; color: #2d3748; line-height: 1.6; }
+        
+        /* Fixed Real-World Style Navigation Bar */
+        nav { display: flex; justify-content: space-between; align-items: center; background-color: #1b4332; padding: 15px 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        nav .logo { color: #52b788; font-size: 24px; font-weight: bold; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { color: #f7f9f6; text-style: none; text-decoration: none; font-size: 16px; font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: #d8f3dc; }
+
+        /* Huge Hero Landing Page Section */
+        .hero { background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://picsum.photos') no-repeat center center/cover; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h1 { font-size: 48px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 20px; max-width: 700px; margin-bottom: 25px; color: #d8f3dc; }
+        .cta-btn { background-color: #52b788; color: #1b4332; padding: 12px 30px; font-size: 18px; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; text-decoration: none; transition: transform 0.2s, background 0.3s; }
+        .cta-btn:hover { background-color: #74c69d; transform: scale(1.05); }
+
+        /* General Main Layout Container */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 32px; color: #1b4332; margin-bottom: 30px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #52b788; margin: 8px auto 0; border-radius: 2px; }
+
+        /* Responsive Picture and Content Grid (About Section) */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center; margin-bottom: 60px; }
+        .info-image img { width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); object-fit: cover; }
+        .info-text h3 { font-size: 24px; color: #2d6a4f; margin-bottom: 15px; }
+        .info-text p { margin-bottom: 15px; font-size: 16px; color: #4a5568; }
+
+        /* Photo Showcase Cards (Creative Crafts Showcase Section) */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-body { padding: 20px; }
+        .card-body h4 { font-size: 20px; color: #1b4332; margin-bottom: 10px; }
+        .card-body p { font-size: 14px; color: #718096; }
+
+        /* Footer Element */
+        footer { background-color: #1b4332; color: #d8f3dc; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVIGATION MENU -->
+    <nav>
+        <div class="logo">☘️ EcoTech</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">The Problem</a></li>
+            <li><a href="#crafts">Craft Ideas</a></li>
+            <li><a href="#action">Take Action</a></li>
+            <li><button id="theme-toggle" style="background: #52b788; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; color: #1b4332; font-weight: bold;">🌓 Mode</button></li>
+        </ul>
+      
+    </nav>
+
+    <!-- 2. HUGE HERO BANNER WITH BACKGROUND IMAGE -->
+    <header class="hero" id="home">
+        <h1>Transforming E-Waste into Art</h1>
+        <p>Millions of electronics are discarded every single year. Join our mission to raise global awareness and upcycle old devices into beautiful creative crafts.</p>
+        <a href="#crafts" class="cta-btn">Explore Craft Ideas</a>
+    </header>
+
+    <main class="container">
+        
+        <!-- 3. THE PROBLEM SECTION (With side image) -->
+        <section id="about">
+            <h2 class="section-title">The Growing Crisis of E-Waste</h2>
+            <div class="info-grid">
+                <div class="info-text">
+                    <h3>What happens to your old phones?</h3>
+                    <p>Electronic waste is currently the fastest-growing domestic waste stream in the world. When electronics end up in trash dumps, dangerous chemicals like lead, mercury, and cadmium leak directly into groundwater systems.</p>
+                    <p>By reusing old tech components like wires, computer keys, and casing components, we completely divert toxics away from ecosystems while creating stunning pieces of tech-art.</p>
+                </div>
+                <div class="info-image">
+                    <!-- High-quality placeholder image representing tech layout/recycling -->
+                    <img src="https://picsum.photos" alt="Old electronics components grid">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CREATIVE CRAFTS PICTURE GALLERY -->
+        <section id="crafts">
+            <h2 class="section-title">Upcycled Tech Gallery</h2>
+            <div class="gallery-grid">
+                
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="https://picsum.photos" alt="Craft idea layout">
+                    <div class="card-body">
+                        <h4>Circuit Board Frames</h4>
+                        <p>Turn old green motherboard tracks into striking retro tech borders for custom desk mirrors and frames.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="https://picsum.photos" alt="Keyboard setup layout">
+                    <div class="card-body">
+                        <h4>Keyboard Fridge Magnets</h4>
+                        <p>Remove tactical mechanical keys from dead keypads to mount dynamic spell-word fridge magnets.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="https://picsum.photos" alt="CD setup">
+                    <div class="card-body">
+                        <h4>CD Mosaic Artwork</h4>
+                        <p>Snip discarded scratched compact discs to layer holographic mirrors onto tables or plant pots.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. FOOTER SITE SECTION -->
+    <footer>
+        <p>&copy; 2026 EcoTech Awareness Initiative. Made on tablet with Acode.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
